@@ -74,15 +74,21 @@ def bbox2points(bbox):
     return xmin, ymin, xmax, ymax
 
 
+# def class_colors(names):
+#     """
+#     Create a dict with one random BGR color for each
+#     class name
+#     """
+#     return {name: (
+#         random.randint(0, 255),
+#         random.randint(0, 255),
+#         random.randint(0, 255)) for name in names}
 def class_colors(names):
     """
     Create a dict with one random BGR color for each
     class name
     """
-    return {name: (
-        random.randint(0, 255),
-        random.randint(0, 255),
-        random.randint(0, 255)) for name in names}
+    return {name: (255, 0, 0) for name in names}
 
 
 def load_network(config_file, data_file, weights, batch_size=1):
